@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Racing 3D</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+<!-- Controles para jogar pelo celular -->
+<div id="controles-mobile" class="oculto">
+
+    <!-- Direção -->
+    <div class="grupo-direcao">
+        <button id="btn-esquerda" class="botao-mobile">◀</button>
+        <button id="btn-direita" class="botao-mobile">▶</button>
+    </div>
+
+    <!-- Ações -->
+    <div class="grupo-acoes">
+        <button id="btn-camera" class="botao-mobile pequeno">📷</button>
+        <button id="btn-interagir" class="botao-mobile pequeno">F</button>
+        <button id="btn-frear" class="botao-mobile frear">FREAR</button>
+        <button id="btn-acelerar" class="botao-mobile acelerar">ACELERAR</button>
+        <button id="btn-re" class="botao-mobile pequeno">RÉ</button>
+    </div>
+
+    <button id="btn-menu-mobile" class="botao-menu-mobile">☰</button>
+
+</div>
+
+
+    <!-- Biblioteca Three.js -->   
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+}
+</script>
+
+</head>
+<body>
+
+    <!-- Menu principal -->
+    <div id="menu">
+        <div class="menu-box">
+            <h1>🏎️ CITY RACING 3D</h1>
+            <p>Simulador de Ferrari urbano</p>
+            <p>Dirija pela cidade e complete suas missões!!</p>
+
+            <button id="iniciar">▶ INICIAR JOGO</button>
+            <button id="comoJogar">🎮 COMO JOGAR</button>
+
+            <div id="regras" class="oculto">
+                <p>W / S — Acelerar e dar ré</p>
+                <p>A / D — Virar o carro</p>
+                <p>ESPAÇO — Frear</p>
+                <p>F — Pegar ou deixar passageiros</p>
+                <p>C — Mudar a câmera</p>
+                <p>ESC — Abrir ou fechar o menu</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de carregamento -->
+    <div id="carregamento" class="oculto">
+        Preparando a cidade...
+    </div>
+
+    <!-- Informações do jogo -->
+    <div id="hud" class="oculto">
+        <h2>🏎️ CITY RACING 3D</h2>
+<p>Velocidade: <span id="velocidade">0</span> km/h</p>
+<p>Dinheiro: R$ <span id="dinheiro">0</span></p>
+<p>Corridas: <span id="corridas">0</span></p>
+<p>Passageiros: <span id="passageiros">0</span></p>
+    </div>
+
+    <!-- GPS -->
+    <div id="painel-gps" class="oculto">
+        <h3>📍 GPS</h3>
+        <canvas id="minimapa" width="220" height="220"></canvas>
+        <p id="objetivo">Vá até o ponto de ônibus</p>
+        <p>Distância: <span id="distancia">0</span> m</p>
+    </div>
+
+    <!-- Mensagens -->
+    <div id="mensagem" class="oculto"></div>
+
+    <!-- Controles -->
+    <div id="controles" class="oculto">
+        <p>WASD: dirigir | F: passageiros | C: câmera | ESC: menu</p>
+    </div>
+
+    
+<!-- Botão para abrir a garagem -->
+<button id="abrirGaragem" class="botao-garagem oculto">
+    🚗 GARAGEM
+</button>
+
+<!-- Loja de carros -->
+<div id="garagem" class="oculto">
+    <div class="garagem-box">
+        <h2>🏎️ CONCESSIONÁRIA</h2>
+        <p>Seu dinheiro: R$ <span id="saldoGaragem">0</span></p>
+
+        <div id="listaCarros"></div>
+
+        <button id="fecharGaragem">VOLTAR AO JOGO</button>
+    </div>
+</div>
+
+
+    <!-- Código principal -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
+

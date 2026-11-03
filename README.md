@@ -31,7 +31,7 @@
 Dirigir pela cidade, acompanhar o GPS e completar os objetivos do jogo.
 
 ## 🌐 Acesse o jogo
-[Corrida3D]()
+[Corrida3D](https://emanuelly2415.github.io/CityRacing3D/Jogo3D/)
 
 ## 👩‍💻 Desenvolvimento
 O projeto foi desenvolvido com HTML, CSS e JavaScript. A inteligência artificial foi utilizada como apoio durante o desenvolvimento.
